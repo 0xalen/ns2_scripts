@@ -185,8 +185,8 @@ $ns_ at 80.0 "$node_2 setdest 190.0 180.0 15.0"
 # Establecer el trafico entre nodos
 # ----------------------------------------------------------------------
 
-# Trafico:
-# Entre nodo cableado y nodo inalambrico
+# Trafico entre nodo cableado y nodo inalambrico
+# De 0 a 2
 set tcp02 [new Agent/TCP]
 	$tcp02 set class_ 2
 
@@ -199,8 +199,7 @@ set ftp02 [new Application/FTP]
 	$ftp02 attach-agent $tcp02
 	$ns_ at 10.0 "$ftp02 start" 
 	$ns_ at 70.0 "$ftp02 stop" 
-
-# Entre nodo cableado 2 y nodo inalambrico 4
+# de 2 a 0
 set tcp20 [new Agent/TCP]
 	$tcp20 set class_ 2
 
